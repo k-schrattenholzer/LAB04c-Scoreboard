@@ -7,11 +7,11 @@ body {
     --color4: hsla(187, 41%, 94%, 1);
     --color5: hsla(170, 28%, 95%, 1); */
 
-    /* --color1: hsla(45, 86%, 83%, 1);
+    --color1: hsla(45, 86%, 83%, 1);
     --color2: hsla(135, 65%, 98%, 1);
     --color3: hsla(315, 37%, 86%, 1);
     --color4: hsla(45, 73%, 98%, 1);
-    --color5: hsla(224, 40%, 79%, 1); */
+    --color5: hsla(224, 40%, 79%, 1);
     
     --header-height: 80px;
     --shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
@@ -23,26 +23,26 @@ body {
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: calc(var(--footer-height));
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* margin-bottom: calc(var(--footer-height)); */
+    padding: 10px;
+    margin: 20px;
 }
 
 section {
     background-color: var(--color5);
-    width: 1000px;
-    max-width: 80%;
-    display: flex;
-    flex-direction: column;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
     justify-content: center;
-    align-items: center;
-    padding-top: var(--gutter);
-    padding-bottom: var(--gutter);
-    margin-top: var(--gutter);
-    margin-bottom: var(--gutter);
+    justify-items: center;
+    padding: 10px;
+    margin: 5px;
     border: solid 2px var(--color1);
+    border-radius: 2rem;
+    font-weight: bold;
 }
 
 header {
@@ -62,26 +62,13 @@ footer {
 
 
 h2 {
-    font-size: 1.8rem;
+    font-size: 4rem;
     font-weight: bold;
+    padding: 0px;
+    margin-top: 20px;
+    margin-bottom: 0px;
 }
 
-.gutter-right {
-    margin-right: 20px;
-}
-
-.main-logo {
-    animation: pulse 5s infinite ease-in-out;
-}
-
-header img {
-    height: var(--header-height);
-}
-
-p {
-    margin: var(--gutter);
-}
-  
 footer {
     position: fixed;
     width: 100%;
@@ -92,22 +79,19 @@ footer {
     background-color: var(--color3);
     box-shadow: var(--shadow);
 }
-  
-  @keyframes pulse {
-    20% {
-      transform: rotate3d(-10, -10, -10, 50deg) scale(1.2);
-    }
 
-    40% {
-        transform: rotate3d(10, 10, -10, 50deg) scale(1);
-    }
+.SCORE {
+    border: 1px black solid;
+    border-radius: 2rem;
+    padding: 10px;
+    margin: 20px;
+    font-weight: 500;
+    font-weight: bold;
+    font-size: 3rem;
+}
 
-    60% {
-        transform: rotate3d(-10, 10, 10, 50deg) scale(1.2);
-      }
-
-    80% {
-        transform: rotate3d(10, 10, 10, 50deg) scale(1);
-    }
-
-  }
+button {
+    padding: 5px;
+    margin: 5px;
+    font-weight: bolder;
+}
