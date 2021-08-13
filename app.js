@@ -5,17 +5,18 @@ const possumButton = document.getElementById ('possum-button');
 const possumScore = document.getElementById ('possum-score');
 // initialize state
 
-let points = 0;
+let ratPoints = 0;
+let possumPoints = 0;
 
 // set event listeners 
 ratButton.addEventListener('click', () => {
-    points = points + 7;
-    ratScore.textContent = points;
+    ratPoints = ratPoints + 7;
+    ratScore.textContent = ratPoints;
 });
 
 possumButton.addEventListener('click', () => {
-    points = points + 7;
-    possumScore.textContent = points;
+    possumPoints = possumPoints + 7;
+    possumScore.textContent = possumPoints;
 });
   // get user input
   // use user input to update state 
